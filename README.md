@@ -1,7 +1,10 @@
 # Note
 This is a custom Dockerfile of grafana docker image. Following bug has been fixed.
+
 #Issues Fixed
+
 ## Permission denied 
+
 ### Problem 
 While starting grafana container one can see container log like below
 ```
