@@ -41,7 +41,7 @@ Look for grafana storage on host:
 ```
 check ownership/permission:
 ```
-ls -lah $(docker volume inspect --format "{{.Mountpoint}}")
+ls -lah $(docker volume inspect <grafana storage name>  --format "{{.Mountpoint}}")
 ```
 Example :
 ```bash
@@ -59,5 +59,5 @@ https://grafana.com/docs/installation/docker/#migration-from-a-previous-version-
 
 So to fix it on host, execute following command.
 ```shell
-chown 472:472 --recursive $(docker volume inspect --format "{{.Mountpoint}}")
+chown 472:472 --recursive $(docker volume inspect dockprom_grafana_data --format "{{.Mountpoint}}")
 ```
