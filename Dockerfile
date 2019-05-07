@@ -37,5 +37,5 @@ EXPOSE 3000
 COPY ./run.sh /run.sh
 
 USER grafana
-WORKDIR /
+WORKDIR "$GF_PATHS_HOME"
 ENTRYPOINT [ "/run.sh" ]
